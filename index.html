@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js'></script>
+    <link rel="shortcut icon" href="../icon.ico">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="クイズ置き場" />
+    <meta property="og:description" content="クイズ置き場" />
+    <meta property="og:image" content="" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>クイズ</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<style type="text/css">
+    body {
+        font-family: -apple-system, 'BlinkMacSystemFont', 'Helvetica Neue', 'Helvetica', 'メイリオ', Meiryo, 'Arial', sans-serif;
+        font-size: 90%;
+        color: white;
+        background-color: #f9f4ef;
+    }
+
+    @media only screen and (max-device-width: 375px) {
+        body {
+            font-size: 80%;
+        }
+
+</style>
+<body>
+    <div class="fixed">
+        <div class="filterArea">
+            <center>
+                <meta name="viewport" content="width=device-width , initial-scale=1 , viewport-fit=cover">
+                <div class="titleframe" id="top">
+                    <div class="titlename">
+                        <center>
+                            <strong>
+                                <span id="titleword" style="font-size: 1.50em;">
+                                    クイズ
+                                </span>
+                            </strong>
+                            <br>Quiz
+                        </center>
+                    </div>
+                </div>
+                <!--<h2>開催年選択</h2>
+                <div class="filter_year">
+                    <input type="checkbox" name="year" value=2020 id="chk2020s"><label for="chk2020s"><span>2020年</span></label>
+                    <input type="checkbox" name="year" value=2019 id="chk2019s"><label for="chk2019s"><span>2019年</span></label>
+                    <input type="checkbox" name="year" value=2018 id="chk2018s"><label for="chk2018s"><span>2018年</span></label>
+                    <input type="checkbox" name="year" value=2017 id="chk2017s"><label for="chk2017s"><span>2017年</span></label>
+                </div>
+                <div class="filter_year">
+                    <input type="checkbox" name="year" value=2016 id="chk2016s"><label for="chk2016s"><span>2016年</span></label>
+                    <input type="checkbox" name="year" value=2015 id="chk2015s"><label for="chk2015s"><span>2015年</span></label>
+                    <input type="checkbox" name="year" value=2014 id="chk2014s"><label for="chk2014s"><span>2014年</span></label>
+                    <input type="checkbox" name="year" value=2013 id="chk2013s"><label for="chk2013s"><span>2013年</span></label>
+                </div>-->
+
+                <div class="filter_pages">
+                    <input type="checkbox" name="page" value="1" id="1p"><label for="1p">文系</label>
+                    <input type="checkbox" name="page" value="2" id="2p"><label for="2p">理系</label>
+                    <input type="checkbox" name="page" value="3" id="3p"><label for="3p">雑学</label>
+                    <input type="checkbox" name="page" value="4" id="4p"><label for="4p">スポーツ</label>
+                    <input type="checkbox" name="page" value="5" id="5p"><label for="5p">ニュース</label><br>
+                    <input type="checkbox" name="page" value="6" id="6p"><label for="6p">芸能</label><br>
+                </div>
+                <!--<div class="filter_pts">
+                    <input type="number" size="40" min="0" placeholder="ポイントを入力" />
+                    <select>
+                        <option value="1" selected>一致</option>
+                        <option value="2">以上</option>
+                        <option value="3">以下</option>
+                    </select>
+                </div>-->
+                <!--<h2>ソート</h2>
+                <div class="filter_sort">
+                    <select name="datasort">
+                        <option value="" selected>ソート・フィルター選択</option>
+                            <option value="1">ポイント降順</option>
+                            <option value="2">ポイント昇順</option>
+                            <option value="3">順位順</option>
+                            <option value="4">最新順</option>
+                            <option value="5">開催順</option>
+                    </select>-->
+                    <h2>問題文・答え文字列検索</h2>
+                    <form onsubmit="return false;" data-persist="garlic">
+                        <div class="filter_keyword">
+                            <input type="text" name="filter_free" id="filter_free" size="40" placeholder="文字を入力 AorBでOR検索ができます。" />
+                        </div>
+                    </form>
+                </div>
+            </center>
+        </div>
+    </div>
+
+
+    <!--/.filterArea-->
+    <hr class="cutline" align="center">
+    <ul id="resultArea">
+        <li class="productCntArea"></li>
+        <center><li class="Board_data"></li></center>
+    </ul>
+    <!--/.resultArea-->
+    <hr id="bottomline" class="cutline" align="center" />
+    <ul id="resultArea">
+        <!--<li class="other_data"></li>-->
+    </ul>
+
+    <br><br><br><br>
+
+    <div class="footer">
+        <div class="tools">
+
+            <a href="#filter_free" class="toolbt search">
+                <div class="toolicon"><i class="material-icons">search</i><br>検索</div>
+            </a>
+
+            <a class="toolbt show_A shows">
+                <div class="toolicon"><i class="material-icons">list</i><br>解答表示</div>
+            </a>
+            <a class="toolbt show_B shows">
+                <div class="toolicon"><i class="material-icons">list</i><br>解答非表示
+                </div>
+            </a>
+            <a href="#top" class="toolbt">
+                <div class="toolicon"><i class="material-icons">arrow_upward</i><br>最上部</div>
+            </a>
+            <a href="#bottomline" class="toolbt">
+                <div class="toolicon"><i class="material-icons">arrow_downward</i><br>最下部</div>
+            </a>
+            <!--<a href="../../" class="toolbt">
+                <div class="toolicon"><i class="material-icons">apps</i><br>TOP</div>
+            </a>-->
+        </div>
+    </div>
+
+    </center>
+    <script src="underscore-min.js"></script>
+    <script src="DATA/kotachi/4choice.js"></script>
+    <script src="quiz.js"></script>
+</body>
+
+<script>
+    $('.search').click(function() {
+        $('#filter_free').focus();
+    });
+
+</script>
+
+<script language="JavaScript" type="text/javascript">
+    $('.show_A').click(function() {
+        $('.show_A').css({
+            'display': '',
+            'display': 'none'
+        });
+        $('.show_B').css({
+            'display': '',
+            'display': 'block'
+        });
+        $('.answer').css({
+            'color': 'white',
+        });
+        $('.answer2').css({
+            'color': 'darkred',
+        });
+    });
+    $('.show_B').click(function() {
+        $('.show_B').css({
+            'display': '',
+            'display': 'none'
+        });
+        $('.answer').css({
+            'color': 'darkred',
+        });
+        $('.answer2').css({
+            'color': 'white',
+        });
+        $('.show_A').css({
+            'display': '',
+            'display': 'block'
+        });
+    });
+
+</script>
+</html>
