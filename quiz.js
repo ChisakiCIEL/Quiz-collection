@@ -145,7 +145,7 @@ $(function () {
 
             _.each(value, function (optionItem, i) {
 
-                _.each(item.type, function (optiItem, i) {
+                _.each([item.type], function (optiItem, i) {
                     if (optiItem == $(optionItem).val()) {
                         isMatch = true;
                     }

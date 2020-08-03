@@ -1,9 +1,9 @@
 let List01 = [
     //genre　1:文系・2:理系・3:雑学・4:スポーツ・5:ニュース・6:芸能
-    //type　1問1答:one・四択:4choice
+    //type　一問一答:1・一問多答:2・四択:3
     {
         genre: 5,
-        type: "4choice",
+        type: 3,
         sentence: '1997年、ダイアナ元妃の国民葬が行われたロンドンの建物は何？',
         answer: 'ウェストミンスター寺院',
         dummy1: 'セントポール大聖堂',
@@ -11,7 +11,7 @@ let List01 = [
         dummy3: 'バッキンガム宮殿'
     }, {
         genre: 3,
-        type: "4choice",
+        type: 3,
         sentence: '自然崇拝や霊魂の不滅を信じる原始的信仰形態を一般に何という？',
         answer: 'アニミズム',
         dummy1: 'アーメン',
@@ -19,117 +19,117 @@ let List01 = [
         dummy3: 'アセスメント'
     }, {
         genre: 2,
-        type: "one",
+        type: 1,
         sentence: '「オーム」といえば電気抵抗の単位ですが、「アンペア」といえば何の単位？',
         answer: '電流'
     }, {
         genre: 1,
-        type: "one",
+        type: 1,
         sentence: '「ゆく川の流れは絶えずして、しかももとの水にあらず」という一節で始まる、鴨長明の随筆は何？',
         answer: '『方丈記』'
     }, {
         genre: 1,
-        type: "one",
+        type: 1,
         sentence: '1881年より明治政府の1円・5円・10円紙幣に登場し、日本の紙幣に肖像が描かれた初めての女性となった、仲哀天皇の后と伝えられる神話中の人物を一般に何皇后と呼ぶでしょう？',
         answer: '神功皇后'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: 'シャクナゲを県の花としている都道府県は滋賀県ですが、ネモトシャクナゲを県の花としているのはどこでしょう？',
         answer: '福島県'
     }, {
         genre: 1,
-        type: "one",
+        type: 1,
         sentence: '縦と横の比率が11：28と、世界で最も横長な国旗を持つ国はどこでしょう？',
         answer: 'カタール'
     }, {
         genre: 4,
-        type: "one",
+        type: 1,
         sentence: 'テニス部門ではトミー・ハース、シャラポワ、錦織圭らが卒業生である、アメリカのフロリダ州ブラデントンにあるスポーツトレーニング機関を何というでしょう？',
         answer: 'IMGアカデミー'
     }, {
         genre: 1,
-        type: "one",
+        type: 1,
         sentence: '平清盛が日宋貿易振興のために大修築した、現在の神戸港西側の一部にあたる港は何でしょう？',
         answer: '大輪田泊'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: '彼が創作した「ナインチェ・プラウス」というキャラクターが、日本でも「うさこちゃん」や「ミッフィー」として知られている、オランダの絵本作家は誰でしょう？',
         answer: 'ディック・ブルーナ'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: '冬場の強い風が電線や竹垣などに吹き付けて鳴る音を、竹を組んで作った柵を意味する言葉を使って何というでしょう？',
         answer: '虎落笛(もがりぶえ)'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: 'イタリア語で「小さい」という意味を持つ、フルートの派生楽器は何でしょう？',
         answer: 'ピッコロ'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: 'イタリア語で「生クリームを煮たもの」という意味がある、生クリームや牛乳、砂糖などを煮詰めてゼラチンで固めたデザートは何でしょう？',
         answer: 'パンナコッタ'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: '「人気のバロメーター」と言った時の「バロメーター」とは、何を測る機械でしょう？',
         answer: '気圧'
     }, {
         genre: 2,
-        type: "one",
+        type: 1,
         sentence: 'アップ、ダウン、ストレンジ、トップ、ボトムの六種類からなる、ハドロンを構成する素粒子を何というでしょう？',
         answer: 'クォーク'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: '気象用語における「平年」とは、過去何年間のことを指すでしょう？',
         answer: '30年'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: 'タービン型、クローバー型、トランペット型などの種類があり、アルファベット3文字で「JCT」と表される、高速道路の合流地点を何というでしょう？',
         answer: 'ジャンクション'
     }, {
         genre: 4,
-        type: "one",
+        type: 1,
         sentence: 'ボクシングの反則の一つで、親指で相手の目つぶしをするものを何というでしょう？',
         answer: 'サミング'
     }, {
         genre: 1,
-        type: "one",
+        type: 1,
         sentence: '万物の根源は　火、水、土、空気の4つからなると唱えた古代ギリシャの哲学者は誰でしょう？',
         answer: 'エンペドクレス'
     }, {
         genre: 2,
-        type: "one",
+        type: 1,
         sentence: '北斗七星はおおぐま座にありますが、南斗六星はどの星座に含まれるでしょう？',
         answer: 'いて座'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: 'これを制作する職人はかけ師と呼ばれる、弓道を行う際に手にはめる道具は何でしょう？',
         answer: '弓掛(ゆがけ)'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: 'その全長は3,540mと、無料で渡れる橋としては日本最長である、宮古島と伊良部島を結ぶ橋は何でしょう？',
         answer: '伊良部大橋'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: '補助通貨単位はパイサである、インドで使われている通貨単位は何でしょう？',
         answer: 'ルピー'
     }, {
         genre: 3,
-        type: "one",
+        type: 1,
         sentence: 'これを制作する職人はかけ師と呼ばれる、弓道を行う際に手にはめる道具は何でしょう？',
         answer: '弓掛(ゆがけ)'
     }, {
         genre: 6,
-        type: "4choice",
+        type: 3,
         sentence: '日本テレビで毎年放送されるTV番組「24時間テレビ」で最初にマラソンを走ったタレントは？',
         answer: '間寛平',
         dummy1: 'ダチョウ倶楽部',
@@ -137,7 +137,7 @@ let List01 = [
         dummy3: '赤井英和',
     }, {
         genre: 5,
-        type: "4choice",
+        type: 3,
         sentence: '2014年の流行語「ごきげんよう」の元となった、NHK連続テレビ小説は何？',
         answer: '花子とアン',
         dummy1: 'ごちそうさん',
@@ -145,7 +145,7 @@ let List01 = [
         dummy3: 'あまちゃん',
     }, {
         genre: 3,
-        type: "4choice",
+        type: 3,
         sentence: '「ミスタードーナツ」を運営している会社は次のうちどれ？',
         answer: 'ダスキン',
         dummy1: 'ミスド',
@@ -153,7 +153,7 @@ let List01 = [
         dummy3: 'マクドナルド',
     }, {
         genre: 5,
-        type: "one",
+        type: 3,
         sentence: '1997年発売開始のトヨタ・プリウスのキャッチコピーは「○○○に間に合いました」。○○○は何？',
         answer: '21世紀',
         dummy1: 'バブル',
@@ -161,7 +161,7 @@ let List01 = [
         dummy3: '平成',
     }, {
         genre: 1,
-        type: "4choice",
+        type: 3,
         sentence: '四天王の中で南を守る仏様は？',
         answer: '増長天',
         dummy1: '持国天',
@@ -169,12 +169,12 @@ let List01 = [
         dummy3: '多聞天',
     }, {
         genre: 5,
-        type: "one",
+        type: 1,
         sentence: '1995年にASEANに加盟したベトナムが当時国内で行っていた経済政策の名称は？',
         answer: 'ドイモイ'
     }, {
         genre: 2,
-        type: "one",
+        type: 1,
         sentence: 'ギリシャ語で、「火星に対抗するもの」という意味がある、さそり座のα星は何？',
         answer: 'アンタレス'
     },
