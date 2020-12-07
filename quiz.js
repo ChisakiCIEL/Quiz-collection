@@ -48,14 +48,16 @@ $(function () {
 
                 Board_data += `<div class="deckframe"><div class="rankerdata"><div class="deck">`;
                 Board_data += `　${line.sentence}<div class="genre">${genre}　</div>`;
-                Board_data += `<hr class="border" style="border: 0.5px solid #d2b886;" /><div class="exp">`
+                Board_data += `<hr class="border" ><div class="exp">`
+
+                let AnsEncode = encodeURIComponent(line.answer);
 
                 if (line.dummy1 != undefined) {
-                    Board_data += `<div class="names1">１．${line.answer}</div><div class="names1 answer2">２．${line.dummy1}</div></div><div class="exp"><div class="names1 answer2">３．${line.dummy2}</div><div class="names1 answer2">４．${line.dummy3}</div>
+                    Board_data += `<div class="names1"><a href="https://www.google.co.jp/search?q=${AnsEncode}" target="_blank" rel="noopener noreferrer">１．${line.answer}</a></div><div class="names1 answer2">２．${line.dummy1}</div></div><div class="exp"><div class="names1 answer2">３．${line.dummy2}</div><div class="names1 answer2">４．${line.dummy3}</div>
               </div>`;
 
                 } else {
-                    Board_data += `<div class="names1 answer">${line.answer}</div></div>`;
+                    Board_data += `<div class="names1 answer"><a href="https://www.google.co.jp/search?q=${AnsEncode}" target="_blank" rel="noopener noreferrer">${line.answer}</a></div></div>`;
                 }
 
                 Board_data += `</div></div></div>`;

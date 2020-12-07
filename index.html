@@ -21,6 +21,7 @@
         font-family: -apple-system, 'BlinkMacSystemFont', 'Helvetica Neue', 'Helvetica', 'メイリオ', Meiryo, 'Arial', sans-serif;
         font-size: 90%;
         color: white;
+        margin: 0px;
         background-color: #f9f4ef;
     }
 
@@ -28,7 +29,7 @@
         body {
             font-size: 80%;
         }
-
+    }
 </style>
 <body>
     <div class="fixed">
@@ -37,14 +38,12 @@
                 <meta name="viewport" content="width=device-width , initial-scale=1 , viewport-fit=cover">
                 <div class="titleframe" id="top">
                     <div class="titlename">
-                        <center>
-                            <strong>
-                                <span id="titleword" style="font-size: 1.50em;">
-                                    クイズ
-                                </span>
-                            </strong>
-                            <br>Quiz
-                        </center>
+                        <strong>
+                            <span id="titleword" style="font-size: 1.50em;">
+                                クイズ
+                            </span>
+                        </strong>
+                        <br>Quiz
                     </div>
                 </div>
                 <div class="filter_pages">
@@ -55,20 +54,19 @@
                     <input type="checkbox" name="page" value="5" id="5p"><label for="5p">ニュース</label><br>
                     <input type="checkbox" name="page" value="6" id="6p"><label for="6p">芸能</label><br>
                 </div>
-                                <div class="filter_option">
+                <!--<div class="filter_option">
                     <input type="checkbox" name="type" value="1" id="1t"><label for="1t">一問一答</label>
                     <input type="checkbox" name="tyoe" value="2" id="2t"><label for="2t">一問多答</label>
                     <input type="checkbox" name="type" value="3" id="3t"><label for="3t">四択</label>
-                </div>
-                    <h2>問題文・答え文字列検索</h2>
-                    <form onsubmit="return false;" data-persist="garlic">
-                        <div class="filter_keyword">
-                            <input type="text" name="filter_free" id="filter_free" size="40" placeholder="文字を入力 AorBでOR検索ができます。" />
-                        </div>
-                    </form>
-                </div>
-            </center>
+                </div>-->
+                <h2>問題文・答え文字列検索</h2>
+                <form onsubmit="return false;" data-persist="garlic">
+                    <div class="filter_keyword">
+                        <input type="text" name="filter_free" id="filter_free" size="40" placeholder="文字を入力 AorBでOR検索ができます。" />
+                    </div>
+                </form>
         </div>
+    </div>
     </div>
 
 
@@ -76,7 +74,7 @@
     <hr class="cutline" align="center">
     <ul id="resultArea">
         <li class="productCntArea"></li>
-        <center><li class="Board_data"></li></center>
+        <li class="Board_data"></li>
     </ul>
     <!--/.resultArea-->
     <hr id="bottomline" class="cutline" align="center" />
@@ -112,21 +110,20 @@
         </div>
     </div>
 
-    </center>
     <script src="underscore-min.js"></script>
     <script src="DATA/kotachi/4choice.js"></script>
     <script src="quiz.js"></script>
 </body>
 
 <script>
-    $('.search').click(function() {
+    $('.search').click(function () {
         $('#filter_free').focus();
     });
 
 </script>
 
 <script language="JavaScript" type="text/javascript">
-    $('.show_A').click(function() {
+    $('.show_A').click(function () {
         $('.show_A').css({
             'display': '',
             'display': 'none'
@@ -142,7 +139,7 @@
             'color': 'darkred',
         });
     });
-    $('.show_B').click(function() {
+    $('.show_B').click(function () {
         $('.show_B').css({
             'display': '',
             'display': 'none'
